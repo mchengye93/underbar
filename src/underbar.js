@@ -221,7 +221,7 @@
 
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator) {
-    // TIP: Try re-using reduce() here.
+    
     iterator = iterator || _.identity;
     // TIP: Try re-using reduce() here.
     return !!_.reduce(collection, function(accumulator, value){
