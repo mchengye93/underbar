@@ -1,3 +1,5 @@
+//https://underscorejs.org/docs/underscore.html
+
 (function() {
   'use strict';
 
@@ -85,8 +87,8 @@
     // implemented for you. Instead of using a standard `for` loop, though,
     // it uses the iteration helper `each`, which you will need to write.
     var result = -1;
-
     _.each(array, function(item, index) {
+
       if (item === target && result === -1) {
         result = index;
       }
@@ -367,23 +369,23 @@
   // input array. For a tip on how to make a copy of an array, see:
   // http://mdn.io/Array.prototype.slice
   _.shuffle = function(array) {
-        // Make a copy of the original array
-    var out = array.slice();
+    //Copy of array
+    var copy = array.slice();
     var temp;
-    var currentIx = array.length - 1;
-    var swapIx;
+    var currentIdx = array.length - 1;
+    var swapIdx;
 
-    while (currentIx) {
-      swapIx = Math.floor(Math.random() * currentIx);
+    while (currentIdx) {
+      swapIdx = Math.floor(Math.random() * currentIdx);
 
-      currentIx -= 1;
+      currentIdx -= 1;
 
-      temp = out[currentIx];
-      out[currentIx] = out[swapIx];
-      out[swapIx] = temp;
+      temp = copy[currentIdx];
+      copy[currentIdx] = copy[swapIdx];
+      copy[swapIdx] = temp;
     }
 
-    return out;
+    return copy;
   };
 
 
